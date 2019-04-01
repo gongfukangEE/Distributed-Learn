@@ -157,39 +157,39 @@ public class RedisLock {
         script = ScriptUtil.getScript("lock.lua");
     }
 
-/**
- * 构建器 builder
- *
- * @author G.Fukang
- * @date: 3/31 22:20
- */
-public static class Builder {
-    private static final String DEFAULT_LOCK_PREFIX = "lock_";
+    /**
+     * 构建器 builder
+     *
+     * @author G.Fukang
+     * @date: 3/31 22:20
+     */
+    public static class Builder {
+        private static final String DEFAULT_LOCK_PREFIX = "lock_";
 
-    // 默认等待时间
-    private static final int DEFAULT_SLEEP_TIME = 100;
+        // 默认等待时间
+        private static final int DEFAULT_SLEEP_TIME = 100;
 
-    private JedisConnectionFactory jedisConnectionFactory = null;
+        private JedisConnectionFactory jedisConnectionFactory = null;
 
-    private String lockPrefix = DEFAULT_LOCK_PREFIX;
-    private int sleepTime = DEFAULT_SLEEP_TIME;
+        private String lockPrefix = DEFAULT_LOCK_PREFIX;
+        private int sleepTime = DEFAULT_SLEEP_TIME;
 
-    public Builder(JedisConnectionFactory jedisConnectionFactory) {
-        this.jedisConnectionFactory = jedisConnectionFactory;
+        public Builder(JedisConnectionFactory jedisConnectionFactory) {
+            this.jedisConnectionFactory = jedisConnectionFactory;
+        }
+
+        public Builder lockPrefix(String lockPrefix) {
+            this.lockPrefix = lockPrefix;
+            return this;
+        }
+
+        public Builder sleepTime(int sleepTime) {
+            this.sleepTime = sleepTime;
+            return this;
+        }
+
+        public RedisLock builder() {
+            return new RedisLock(this);
+        }
     }
-
-    public Builder lockPrefix(String lockPrefix) {
-        this.lockPrefix = lockPrefix;
-        return this;
-    }
-
-    public Builder sleepTime(int sleepTime) {
-        this.sleepTime = sleepTime;
-        return this;
-    }
-
-    public RedisLock builder() {
-        return new RedisLock(this);
-    }
-}
 }
