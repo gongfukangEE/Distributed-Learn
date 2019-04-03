@@ -69,7 +69,6 @@ public class RedisLockTest {
                 .setNameFormat("current-thread-%d").build();
         executorServicePool = new ThreadPoolExecutor(350, 350, 0L, TimeUnit.MILLISECONDS,
                 new ArrayBlockingQueue<Runnable>(200), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
-
     }
 
     private static class Worker implements Runnable {
