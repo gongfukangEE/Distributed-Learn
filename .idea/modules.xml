@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/my-distributed-tools.iml" filepath="$PROJECT_DIR$/my-distributed-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-learn.iml" filepath="$PROJECT_DIR$/distributed-learn.iml" />
     </modules>
   </component>
 </project>
