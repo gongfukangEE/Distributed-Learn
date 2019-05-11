@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="distributed-learn" />
         <module name="my-distributed-tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="distributed-learn" target="1.8" />
       <module name="my-distributed-tools" target="1.8" />
     </bytecodeTargetLevel>
   </component>

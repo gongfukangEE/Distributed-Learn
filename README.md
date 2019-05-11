@@ -7,6 +7,7 @@
 - 基于 Redis + Lua 的令牌桶限流
 - 一致性 Hash 算法 Java 实现（不带虚拟节点 + 虚拟节点）
 - 基于乘法 Hash 的布隆过滤器 Java 实现
+- 基于 Redis BitMap 的布隆过滤器 Java 实现
 - 基于布隆过滤器的缓存穿透解决方案
 - 基于 Redis 分布式锁保证服务幂等性
 
